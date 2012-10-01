@@ -271,9 +271,9 @@ END:VCALENDAR)
     calendar = RiCal.Calendar
     calendar.add_x_property 'x_wr_calname', 'Lifetracker'
     calendar.export.should == %Q(BEGIN:VCALENDAR
+VERSION:2.0
 PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
 CALSCALE:GREGORIAN
-VERSION:2.0
 X-WR-CALNAME:Lifetracker
 END:VCALENDAR
 )
