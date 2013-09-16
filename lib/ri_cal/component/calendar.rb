@@ -169,7 +169,7 @@ module RiCal
           stream.string
         end
 
-        if RUBY_VERSION =~ /^1\.9/
+        if RUBY_VERSION >= "1.9"
           def utf8_safe_split(string, n)
             if string.bytesize <= n
               [string, nil]
@@ -198,7 +198,7 @@ module RiCal
                 n = n - 1
                 before = string[0, n]
                 after = string[n..-1]
-              end      
+              end
               [before, after.empty? ? nil : after]
             end
           end
@@ -247,7 +247,7 @@ module RiCal
           export_stream.string
         end
       end
-      
+
       alias_method :export_to, :export
 
     end
